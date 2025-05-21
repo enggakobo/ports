@@ -1,7 +1,5 @@
     COMMENT = X11 toolkits
 
-    SUBDIR += SoXt
-    SUBDIR += Xaw3d
     SUBDIR += Xmt
     SUBDIR += amtk
     SUBDIR += aquamarine
@@ -50,6 +48,7 @@
     SUBDIR += gtksourceview5
     SUBDIR += gtksourceviewmm3
     SUBDIR += guile-gnome-platform
+    SUBDIR += hyprland-qt-support
     SUBDIR += imgui
     SUBDIR += irrlicht
     SUBDIR += itk
@@ -81,6 +80,7 @@
     SUBDIR += kproperty
     SUBDIR += lesstif
     SUBDIR += libXaw
+    SUBDIR += libXaw3d
     SUBDIR += libXmu
     SUBDIR += libXt
     SUBDIR += libadwaita
@@ -235,11 +235,10 @@
     SUBDIR += rubygem-uh
     SUBDIR += rubygem-vte3
     SUBDIR += rubygem-vte4
-    SUBDIR += scenefx
+    SUBDIR += scenefx02
     SUBDIR += scintilla
     SUBDIR += sdl2_pango
     SUBDIR += sdl_pango
-    SUBDIR += shared-desktop-ontologies
     SUBDIR += skinlf
     SUBDIR += soqt
     SUBDIR += swt
@@ -258,9 +257,10 @@
     SUBDIR += viewklass
     SUBDIR += vte
     SUBDIR += vte3
-    SUBDIR += wlroots
     SUBDIR += wlroots015
     SUBDIR += wlroots017
+    SUBDIR += wlroots018
+    SUBDIR += wlroots019
     SUBDIR += wmapp
     SUBDIR += wxgtk30
     SUBDIR += wxgtk32

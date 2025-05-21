@@ -49,10 +49,6 @@
     SUBDIR += edyvalue
     SUBDIR += eijiro-fpw
     SUBDIR += epwutil
-    SUBDIR += esecanna
-    SUBDIR += esecanna-module-vje25
-    SUBDIR += esecanna-module-vje30
-    SUBDIR += esecanna-module-wnn6
     SUBDIR += eterm
     SUBDIR += fcitx-anthy
     SUBDIR += fcitx-mozc
@@ -187,7 +183,6 @@
     SUBDIR += mozc-tool
     SUBDIR += multiskkserv
     SUBDIR += mypaedia-fpw-package
-    SUBDIR += namazu
     SUBDIR += namazu2
     SUBDIR += navi2ch
     SUBDIR += ne
@@ -198,6 +193,7 @@
     SUBDIR += ng-devel
     SUBDIR += ngraph-fonts
     SUBDIR += nkf
+    SUBDIR += open_jtalk
     SUBDIR += p5-2chproxy
     SUBDIR += p5-Date-Japanese-Era
     SUBDIR += p5-Date-Japanese-Holiday
@@ -285,6 +281,7 @@
     SUBDIR += today
     SUBDIR += tomoe
     SUBDIR += uim-anthy
+    SUBDIR += uim-anthy-unicode
     SUBDIR += uim-mozc
     SUBDIR += uim-tomoe-gtk
     SUBDIR += vera-fpw

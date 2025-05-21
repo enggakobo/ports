@@ -90,7 +90,6 @@
     SUBDIR += gom
     SUBDIR += goose
     SUBDIR += gqlplus
-    SUBDIR += grass7
     SUBDIR += grass8
     SUBDIR += greptimedb
     SUBDIR += hashtypes
@@ -557,6 +556,7 @@
     SUBDIR += pg_repack
     SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
+    SUBDIR += pg_store_plans
     SUBDIR += pg_tileserv
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
@@ -566,7 +566,6 @@
     SUBDIR += pgbarman
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
-    SUBDIR += pgfouine
     SUBDIR += pgloader3
     SUBDIR += pglogical
     SUBDIR += pgmetrics
@@ -575,6 +574,7 @@
     SUBDIR += pgpool-II-43
     SUBDIR += pgpool-II-44
     SUBDIR += pgpool-II-45
+    SUBDIR += pgpool-II-46
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -642,7 +642,6 @@
     SUBDIR += plpgsql_check
     SUBDIR += pointcloud
     SUBDIR += postgis-jdbc
-    SUBDIR += postgis31
     SUBDIR += postgis33
     SUBDIR += postgis34
     SUBDIR += postgis35
@@ -719,9 +718,7 @@
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += proxysql
     SUBDIR += pspg
-    SUBDIR += puppetdb-terminus7
     SUBDIR += puppetdb-terminus8
-    SUBDIR += puppetdb7
     SUBDIR += puppetdb8
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -743,7 +740,6 @@
     SUBDIR += py-asyncmy
     SUBDIR += py-asyncpg
     SUBDIR += py-berkeleydb
-    SUBDIR += py-carbon
     SUBDIR += py-cassandra-driver
     SUBDIR += py-couchdb
     SUBDIR += py-cymysql
@@ -791,7 +787,6 @@
     SUBDIR += py-pglite
     SUBDIR += py-pgmigrate
     SUBDIR += py-pgspecial
-    SUBDIR += py-pgxnclient
     SUBDIR += py-pickledb
     SUBDIR += py-pickleshare
     SUBDIR += py-pony
@@ -836,6 +831,7 @@
     SUBDIR += py-sqlalchemy14
     SUBDIR += py-sqlalchemy20
     SUBDIR += py-sqlcipher3
+    SUBDIR += py-sqlframe
     SUBDIR += py-sqlglot
     SUBDIR += py-sqlglotrs
     SUBDIR += py-sqlite-anyio
@@ -876,13 +872,14 @@
     SUBDIR += redis-devel
     SUBDIR += redis62
     SUBDIR += redis72
+    SUBDIR += redis74
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
-    SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
     SUBDIR += rocksdb-jni
+    SUBDIR += rocksdb9
     SUBDIR += rqlite
     SUBDIR += rrdman
     SUBDIR += rrdmerge
@@ -1010,6 +1007,7 @@
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-red-arrow
     SUBDIR += rubygem-red-arrow-dataset
+    SUBDIR += rubygem-red-arrow-flight
     SUBDIR += rubygem-red-gandiva
     SUBDIR += rubygem-red-parquet
     SUBDIR += rubygem-redis
@@ -1026,7 +1024,6 @@
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace110
     SUBDIR += rubygem-ruby-mysql
-    SUBDIR += rubygem-scenic61
     SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-solid_cable
@@ -1077,7 +1074,6 @@
     SUBDIR += symphytum
     SUBDIR += tarantool
     SUBDIR += tarantool-c
-    SUBDIR += tarantool2
     SUBDIR += tcl-Mysql
     SUBDIR += tcl-lmdb
     SUBDIR += tcl-sqlite3

@@ -1,4 +1,4 @@
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2024-02-03 15:42:55 UTC
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2025-04-15 08:30:07 UTC
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -10,7 +10,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -17,8 +17,8 @@
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
  constexpr auto kAllowedCallerPrograms =
-     base::MakeFixedFlatSet<base::FilePath::StringPieceType>({
-@@ -82,7 +82,7 @@ bool IsLaunchedByTrustedProcess() {
+     base::MakeFixedFlatSet<base::FilePath::StringViewType>({
+@@ -83,7 +83,7 @@ bool IsLaunchedByTrustedProcess() {
  #if !defined(NDEBUG)
    // Just return true on debug builds for the convenience of development.
    return true;

@@ -1,4 +1,4 @@
---- content/browser/browser_main_loop.cc.orig	2025-01-25 09:34:31 UTC
+--- content/browser/browser_main_loop.cc.orig	2025-05-06 12:23:00 UTC
 +++ content/browser/browser_main_loop.cc
 @@ -249,6 +249,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"
@@ -26,7 +26,7 @@
  #endif
  
    // GLib's spawning of new processes is buggy, so it's important that at this
-@@ -581,7 +593,7 @@ int BrowserMainLoop::EarlyInitialization() {
+@@ -575,7 +587,7 @@ int BrowserMainLoop::EarlyInitialization() {
        base::ThreadType::kDisplayCritical);
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

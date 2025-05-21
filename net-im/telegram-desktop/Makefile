@@ -1,10 +1,13 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	5.10.7
-PORTREVISION=	3
+DISTVERSION=	5.14.1
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+
+PATCH_SITES=	https://github.com/telegramdesktop/tdesktop/commit/
+PATCHFILES=	f676d32f96e70874d9d8e78788c37b82b1e3324a.patch:-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Telegram Desktop messaging app
@@ -33,6 +36,8 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libdbus-1.so:devel/dbus \
 		libdispatch.so:devel/libdispatch \
 		libfmt.so:devel/libfmt \
+		libgeoclue-2.so:net/geoclue \
+		libgeocode-glib-2.so:net/geocode-glib2 \
 		libhunspell-1.7.so:textproc/hunspell \
 		liblz4.so:archivers/liblz4 \
 		libopenh264.so:multimedia/openh264 \
@@ -42,6 +47,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libqrcodegencpp.so:graphics/qr-code-generator \
 		librnnoise.so:audio/rnnoise \
 		libsrtp2.so:net/libsrtp2 \
+		libtde2e.so:net-im/tdlib \
 		libxxhash.so:devel/xxhash \
 		libvpx.so:multimedia/libvpx
 
@@ -101,18 +107,6 @@ X11_LIB_DEPENDS=	libxcb-keysyms.so:x11/xcb-util-keysyms \
 TELEGRAM_API_HASH=	20a3432aab43f24bb4460fceac5ba38d
 TELEGRAM_API_ID=	601761
 
-.include <bsd.port.pre.mk> # for COMPILER_VERSION
-
-.if ${OPSYS} == FreeBSD && defined(WITH_CCACHE_BUILD) && !defined(NO_CCACHE)
-CMAKE_ARGS+=	-DCMAKE_CC_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache" \
-		-DCMAKE_CPP_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache" \
-		-DCMAKE_CXX_COMPILER_LAUNCHER="${LOCALBASE}/bin/ccache"
-.endif
-
-.if ${OPSYS} == FreeBSD && ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 190
-EXTRA_PATCHES=		${PATCHDIR}/extrapatch-Telegram_lib__base_base_qt_qt__compare.h
-.endif
-
 post-extract:
 	# Some of the third-party components already built, and
 	# can be safely removed
@@ -143,4 +137,4 @@ post-patch:
 	${REINPLACE_CMD} -e /-Wno-maybe-uninitialized/d -e /-fstack-clash-protection/d \
 	    ${WRKSRC}/cmake/options_linux.cmake
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

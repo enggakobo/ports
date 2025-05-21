@@ -1,8 +1,8 @@
---- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2024-12-22 12:24:29 UTC
+--- chrome/browser/ui/views/profiles/profile_menu_view_base.cc.orig	2025-05-07 06:48:23 UTC
 +++ chrome/browser/ui/views/profiles/profile_menu_view_base.cc
-@@ -693,7 +693,7 @@ void ProfileMenuViewBase::SetProfileIdentityInfo(
-       image_model, management_badge, this,
-       ProfileMenuViewBase::kIdentityImageSize, kIdentityImageBorder);
+@@ -650,7 +650,7 @@ void ProfileMenuViewBase::SetProfileIdentityInfo(
+       ProfileMenuViewBase::kIdentityImageSize, kIdentityImageBorder,
+       /*has_dotted_ring=*/false);
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

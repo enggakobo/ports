@@ -1,6 +1,6 @@
 PORTNAME=	orange3-text
 DISTVERSION=	1.3.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	textproc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -9,6 +9,9 @@ COMMENT=	Text Mining add-on for Orange3
 WWW=		https://github.com/biolab/orange3-text
 
 LICENSE=	AGPLv3
+
+DEPRECATED=	Depends on expiring misc/orange3
+EXPIRATION_DATE=2025-06-21
 
 RUN_DEPENDS=	orange3>0:misc/orange3 \
 		${PYNUMPY} \

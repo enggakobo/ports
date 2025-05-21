@@ -1,6 +1,6 @@
 PORTNAME=	orange3
 DISTVERSION=	3.29.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	misc python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,6 +8,9 @@ COMMENT=	Component-based data mining software
 WWW=		https://orange.biolab.si/
 
 LICENSE=	GPLv3
+
+DEPRECATED=	Depends on expiring devel/py-orange-canvas-core
+EXPIRATION_DATE=2025-06-21
 
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY} \

@@ -1,4 +1,4 @@
---- headless/lib/headless_content_main_delegate.cc.orig	2024-11-16 12:20:41 UTC
+--- headless/lib/headless_content_main_delegate.cc.orig	2025-05-06 12:23:00 UTC
 +++ headless/lib/headless_content_main_delegate.cc
 @@ -407,7 +407,7 @@ void HeadlessContentMainDelegate::InitCrashReporter(
    if (process_type != ::switches::kZygoteProcess) {

@@ -1,5 +1,5 @@
 PORTNAME=	qemu
-DISTVERSION=	9.1.0.20241130
+DISTVERSION=	9.1.0.20250228
 CATEGORIES=	emulators
 PKGNAMESUFFIX=	-devel
 DIST_SUBDIR=	qemu/${PORTVERSION}
@@ -23,11 +23,11 @@ USES=		bison compiler:c11 cpe gmake gnome iconv:wchar_t localbase:ldflags \
 		ninja perl5 pkgconfig python:build shebangfix tar:xz xorg
 USE_GITLAB=	yes
 GL_ACCOUNT=	qemu-project
-GL_TAGNAME=	72b88908d12ee9347d13539c7dd9a252625158d1
+GL_TAGNAME=	6b7521818b26134726b3494cd06f04e30659ce2c
 GL_TUPLE=	qemu-project:keycodemapdb:f5772a62ec52591ff6870b7e8ef32482371f22c6:keycodemapdb/subprojects/keycodemapdb \
 		qemu-project:dtc:b6910bec11614980a21e46fbccc35934b671bd81:dtc/subprojects/dtc \
 		qemu-project:libvfio-user:0b28d205572c80b568a1003db2c8f37ca333e4d7:libvfio/subprojects/libvfio-user \
-		qemu-project:meson:fd309fff248bb697498befa89c3b81049b8b2c0c:meson/meson \
+		qemu-project:meson:be6540e6fdcf1ee88939a74521caa3813b039199:meson/meson \
 		qemu-project:berkeley-softfloat-3:b64af41c3276f97f0e181920400ee056b9c88037:berkeleysoftfloat3/subprojects/berkeley-softfloat-3 \
 		qemu-project:berkeley-testfloat-3:e7af9751d9f9fd3b47911f51a5cfd08af256a9ab:berkeleytestfloat3/subprojects/berkeley-testfloat-3
 USE_GNOME=	cairo glib20
@@ -51,8 +51,9 @@ WITHOUT_CPU_CFLAGS=yes	#to avoid problems with register allocation
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 PORTDOCS=	.buildinfo _static/* about/* dbus-dbusindex.html devel/* \
-			docs genindex.html index.html interop/* objects.inv \
-			search.html searchindex.js specs/* system/* tools/* user/*
+			docs genindex.html glossary.html index.html interop/* \
+			objects.inv search.html searchindex.js specs/* system/* \
+			tools/* user/*
 
 OPTIONS_DEFINE=	SAMBA X11 GTK3 OPENGL GNUTLS SASL JPEG PNG CURL VDE \
 		CDROM_DMA USBREDIR X86_TARGETS STATIC_LINK DOCS CAPSTONE
@@ -88,7 +89,7 @@ GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 GNUTLS_CONFIGURE_OFF=	--disable-gnutls
 GTK3_LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 GTK3_USES=	gettext gl
-GTK3_USE=	GNOME=gdkpixbuf2,vte3 XORG=x11,xext
+GTK3_USE=	GNOME=gdkpixbuf,vte3 XORG=x11,xext
 GTK3_CONFIGURE_OFF=	--disable-gtk --disable-vte
 JPEG_USES=		jpeg
 JPEG_CONFIGURE_OFF=	--disable-vnc-jpeg
@@ -111,7 +112,7 @@ USBREDIR_RUN_DEPENDS=	usbredir>=0.6:net/usbredir
 USBREDIR_CONFIGURE_OFF=	--disable-usb-redir
 VDE_CONFIGURE_OFF=	--disable-vde
 X11_USES=	sdl
-X11_USE=	SDL=sdl2 XORG=x11,xext GNOME=gdkpixbuf2
+X11_USE=	SDL=sdl2 XORG=x11,xext GNOME=gdkpixbuf
 X11_CONFIGURE_ENABLE=	sdl
 
 .include <bsd.port.options.mk>

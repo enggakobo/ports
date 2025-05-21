@@ -491,6 +491,7 @@
     SUBDIR += ltl2ba
     SUBDIR += m4ri
     SUBDIR += m4rie
+    SUBDIR += manifold
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathex
@@ -500,7 +501,6 @@
     SUBDIR += mathomatic
     SUBDIR += mathpresso
     SUBDIR += matio
-    SUBDIR += matlab-installer
     SUBDIR += maxima
     SUBDIR += mbasecalc
     SUBDIR += mcsim
@@ -563,8 +563,8 @@
     SUBDIR += octave-forge-biosig
     SUBDIR += octave-forge-bsltl
     SUBDIR += octave-forge-cfitsio
-    SUBDIR += octave-forge-chartjs
     SUBDIR += octave-forge-cgi
+    SUBDIR += octave-forge-chartjs
     SUBDIR += octave-forge-civil-engineering
     SUBDIR += octave-forge-coder
     SUBDIR += octave-forge-communications
@@ -573,6 +573,7 @@
     SUBDIR += octave-forge-data-smoothing
     SUBDIR += octave-forge-database
     SUBDIR += octave-forge-dataframe
+    SUBDIR += octave-forge-datatypes
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
@@ -583,6 +584,7 @@
     SUBDIR += octave-forge-fileio
     SUBDIR += octave-forge-financial
     SUBDIR += octave-forge-fits
+    SUBDIR += octave-forge-fl-core
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
     SUBDIR += octave-forge-ga
@@ -637,6 +639,7 @@
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pde1dm
+    SUBDIR += octave-forge-piqp
     SUBDIR += octave-forge-pkg-octave-doc
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
@@ -873,6 +876,7 @@
     SUBDIR += paritwine
     SUBDIR += parmetis
     SUBDIR += parmgridgen
+    SUBDIR += pcalc
     SUBDIR += pdal
     SUBDIR += pear-Math_BigInteger
     SUBDIR += pear-Math_Combinatorics
@@ -907,10 +911,9 @@
     SUBDIR += primesum
     SUBDIR += primme
     SUBDIR += prng
-    SUBDIR += pspp
+    SUBDIR += proxsuite
     SUBDIR += psurface
     SUBDIR += py-CyLP
-    SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
     SUBDIR += py-MutatorMath
     SUBDIR += py-POT
@@ -957,6 +960,7 @@
     SUBDIR += py-cvxpy
     SUBDIR += py-cyipopt
     SUBDIR += py-cypari2
+    SUBDIR += py-daqp
     SUBDIR += py-deap
     SUBDIR += py-dgl
     SUBDIR += py-diffcp
@@ -1035,7 +1039,6 @@
     SUBDIR += py-nevergrad
     SUBDIR += py-nlopt
     SUBDIR += py-numba-stats
-    SUBDIR += py-numdifftools
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
@@ -1056,6 +1059,7 @@
     SUBDIR += py-pplpy
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
+    SUBDIR += py-pwlf
     SUBDIR += py-py-find-1st
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyaudi
@@ -1078,7 +1082,6 @@
     SUBDIR += py-pyreadstat
     SUBDIR += py-pyrr
     SUBDIR += py-pysmt
-    SUBDIR += py-pystan
     SUBDIR += py-pysym
     SUBDIR += py-pytanque
     SUBDIR += py-pytensor

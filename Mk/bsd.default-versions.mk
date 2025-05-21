@@ -56,14 +56,14 @@ FPC_DEFAULT?=		3.3.1
 .  else
 FPC_DEFAULT?=		3.2.3
 .  endif
-# Possible values: 11, 12, 13, 14, 15
+# Possible values: 11, 12, 13, 14, 15, 16
 # (Any other version is completely unsupported and not meant for general use.)
 GCC_DEFAULT?=		13
 # Possible values: 10
 GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
-# Possible values: 1.20, 1.21, 1.22, 1.23, 1.24-devel
+# Possible values: 1.20, 1.21, 1.22, 1.23, 1.24, 1.25-devel
 GO_DEFAULT?=		1.21
 # Possible values: 1.8, 2.2, 3.0
 GUILE_DEFAULT?=		2.2
@@ -73,7 +73,7 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 18, 19, 20, 21, 22 23
+# Possible values: 8, 11, 17, 18, 19, 20, 21, 22, 23, 24
 JAVA_DEFAULT?=		8
 # Possible values: 3.8.0, 4.99
 .  if (defined(WANT_LAZARUS_DEVEL) && !empty(WANT_LAZARUS_DEVEL)) || ${ARCH:Maarch64}
@@ -88,9 +88,13 @@ LIBRSVG2_DEFAULT?=	rust
 LIBRSVG2_DEFAULT?=	legacy
 .  endif
 # Possible values: c7 rl9
+.  if ${ARCH:Mi386}
 LINUX_DEFAULT?=		c7
+.  else
+LINUX_DEFAULT?=		rl9
+.  endif
 # Possible values: 11, 12, 13, 14, 15, 16, 17, 18, 19, -devel (to be used when non-base compiler is required)
-LLVM_DEFAULT?=		15
+LLVM_DEFAULT?=		19
 # Possible values: 5.1, 5.2, 5.3, 5.4
 LUA_DEFAULT?=		5.4
 # Possible values: luajit, luajit-devel, luajit-openresty
@@ -114,7 +118,7 @@ OPENLDAP_DEFAULT?=	26
     defined(PACKAGE_BUILDING))
 # When changing the default here, make sure the DEPRECATED/EXPIRATION lines in
 # the older Perl 5 ports are uncommented at the same time.
-PERL5_DEFAULT?=		5.36
+PERL5_DEFAULT?=		5.40
 .  elif !defined(PERL5_DEFAULT)
 # There's no need to replace development versions, like "5.23" with "devel"
 # because 1) nobody is supposed to use it outside of poudriere, and 2) it must
@@ -127,7 +131,7 @@ _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 13, 14, 15, 16, 17
-PGSQL_DEFAULT?=		16
+PGSQL_DEFAULT?=		17
 # Possible values: 8.1, 8.2, 8.3, 8.4
 PHP_DEFAULT?=		8.3
 # Possible values: rust, legacy
@@ -136,12 +140,12 @@ PYCRYPTOGRAPHY_DEFAULT?=	rust
 .  else
 PYCRYPTOGRAPHY_DEFAULT?=	legacy
 .  endif
-# Possible values: 3.8, 3.9, 3.10, 3.11
+# Possible values: 3.9, 3.10, 3.11, 3.12
 PYTHON_DEFAULT?=	3.11
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
-# Possible values: 3.1, 3.2, 3.3
-RUBY_DEFAULT?=		3.2
+# Possible values: 3.2, 3.3, 3.4, 3.5
+RUBY_DEFAULT?=		3.3
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
 # Possible values: 4.16, 4.19, 4.20

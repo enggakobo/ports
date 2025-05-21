@@ -1,6 +1,6 @@
---- remoting/host/setup/start_host_main.cc.orig	2024-10-22 08:31:56 UTC
+--- remoting/host/setup/start_host_main.cc.orig	2025-04-04 08:52:13 UTC
 +++ remoting/host/setup/start_host_main.cc
-@@ -38,7 +38,7 @@
+@@ -45,7 +45,7 @@
  #include <unistd.h>
  #endif  // BUILDFLAG(IS_POSIX)
  

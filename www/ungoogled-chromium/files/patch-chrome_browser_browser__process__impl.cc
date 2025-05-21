@@ -1,24 +1,24 @@
---- chrome/browser/browser_process_impl.cc.orig	2025-01-25 09:34:31 UTC
+--- chrome/browser/browser_process_impl.cc.orig	2025-05-06 12:23:00 UTC
 +++ chrome/browser/browser_process_impl.cc
-@@ -239,7 +239,7 @@
- #include "chrome/browser/ui/profiles/profile_picker.h"
- #endif
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/error_reporting/chrome_js_error_report_processor.h"  // nogncheck
- #endif
- 
-@@ -258,7 +258,7 @@
+@@ -261,7 +261,7 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/browser_features.h"
- #include "components/os_crypt/async/browser/secret_portal_key_provider.h"
+ #include "components/os_crypt/async/browser/fallback_linux_key_provider.h"
+ #include "components/os_crypt/async/browser/freedesktop_secret_key_provider.h"
+@@ -273,7 +273,7 @@
+ #include "chrome/browser/safe_browsing/safe_browsing_service.h"
  #endif
-@@ -1135,7 +1135,7 @@ void BrowserProcessImpl::RegisterPrefs(PrefRegistrySim
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // How often to check if the persistent instance of Chrome needs to restart
+ // to install an update.
+ static const int kUpdateCheckIntervalHours = 6;
+@@ -1159,7 +1159,7 @@ void BrowserProcessImpl::RegisterPrefs(PrefRegistrySim
                                  GoogleUpdateSettings::GetCollectStatsConsent());
    registry->RegisterBooleanPref(prefs::kDevToolsRemoteDebuggingAllowed, true);
  
@@ -27,30 +27,21 @@
    os_crypt_async::SecretPortalKeyProvider::RegisterLocalPrefs(registry);
  #endif
  }
-@@ -1306,7 +1306,7 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
- 
-   ApplyMetricsReportingPolicy();
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   ChromeJsErrorReportProcessor::Create();
- #endif
- 
-@@ -1393,7 +1393,7 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
-               features::kUseAppBoundEncryptionProviderForEncryption))));
+@@ -1424,7 +1424,7 @@ void BrowserProcessImpl::PreMainMessageLoopRun() {
+           local_state())));
  #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (base::FeatureList::IsEnabled(features::kDbusSecretPortal)) {
-     providers.emplace_back(
-         /*precedence=*/10u,
-@@ -1623,7 +1623,7 @@ void BrowserProcessImpl::Unpin() {
+   base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
+   if (cmd_line->GetSwitchValueASCII(password_manager::kPasswordStore) !=
+       "basic") {
+@@ -1693,7 +1693,7 @@ void BrowserProcessImpl::Unpin() {
+ }
+ 
  // Mac is currently not supported.
- // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
- // complete.
--#if BUILDFLAG(IS_WIN) || (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+#if BUILDFLAG(IS_WIN) || (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
  bool BrowserProcessImpl::IsRunningInBackground() const {
    // Check if browser is in the background.

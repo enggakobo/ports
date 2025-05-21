@@ -28,6 +28,7 @@
     SUBDIR += expense
     SUBDIR += fabric
     SUBDIR += fava
+    SUBDIR += favagtk
     SUBDIR += fixc
     SUBDIR += freqtrade
     SUBDIR += frontaccounting
@@ -54,8 +55,6 @@
     SUBDIR += myphpmoney
     SUBDIR += nextcloud-cospend
     SUBDIR += odoo
-    SUBDIR += odoo14
-    SUBDIR += odoo15
     SUBDIR += odoo16
     SUBDIR += odoo17
     SUBDIR += ord

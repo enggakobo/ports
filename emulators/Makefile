@@ -35,6 +35,7 @@
     SUBDIR += fbneo
     SUBDIR += fbsd-duckstation
     SUBDIR += fceux
+    SUBDIR += firebird-emu
     SUBDIR += flexemu
     SUBDIR += flycast
     SUBDIR += fmsx
@@ -62,7 +63,6 @@
     SUBDIR += libretro-bsnes
     SUBDIR += libretro-flycast
     SUBDIR += libretro-kronos
-    SUBDIR += libretro-mame
     SUBDIR += libretro-pcsx2
     SUBDIR += libretro-ppsspp
     SUBDIR += libretro-reicast
@@ -157,16 +157,19 @@
     SUBDIR += vice
     SUBDIR += virtualbox-ose
     SUBDIR += virtualbox-ose-70
+    SUBDIR += virtualbox-ose-71
     SUBDIR += virtualbox-ose-additions
     SUBDIR += virtualbox-ose-additions-legacy
     SUBDIR += virtualbox-ose-additions-nox11
     SUBDIR += virtualbox-ose-additions-nox11-legacy
     SUBDIR += virtualbox-ose-kmod
     SUBDIR += virtualbox-ose-kmod-70
+    SUBDIR += virtualbox-ose-kmod-71
     SUBDIR += virtualbox-ose-kmod-legacy
     SUBDIR += virtualbox-ose-legacy
     SUBDIR += virtualbox-ose-nox11
     SUBDIR += virtualbox-ose-nox11-70
+    SUBDIR += virtualbox-ose-nox11-71
     SUBDIR += virtualbox-ose-nox11-legacy
     SUBDIR += visualboyadvance-m
     SUBDIR += vmips

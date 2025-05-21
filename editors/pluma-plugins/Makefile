@@ -1,6 +1,6 @@
 PORTNAME=	pluma-plugins
 PORTVERSION=	1.28.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -28,7 +28,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c11 gettext gnome localbase gmake pkgconfig \
 		python shebangfix tar:xz
-USE_GNOME=	cairo gdkpixbuf2 gtk30 gtksourceview4 intlhack introspection \
+USE_GNOME=	cairo gdkpixbuf gtk30 gtksourceview4 intlhack introspection \
 		intltool vte3
 USE_CSTD=	c11
 USE_LDCONFIG=	yes

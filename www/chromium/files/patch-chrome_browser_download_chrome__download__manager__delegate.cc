@@ -1,6 +1,6 @@
---- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2025-01-15 09:18:26 UTC
+--- chrome/browser/download/chrome_download_manager_delegate.cc.orig	2025-04-04 08:52:13 UTC
 +++ chrome/browser/download/chrome_download_manager_delegate.cc
-@@ -1844,7 +1844,7 @@ void ChromeDownloadManagerDelegate::OnDownloadTargetDe
+@@ -1864,7 +1864,7 @@ void ChromeDownloadManagerDelegate::OnDownloadTargetDe
  bool ChromeDownloadManagerDelegate::IsOpenInBrowserPreferredForFile(
      const base::FilePath& path) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -9,7 +9,7 @@
    if (path.MatchesExtension(FILE_PATH_LITERAL(".pdf"))) {
      return !download_prefs_->ShouldOpenPdfInSystemReader();
    }
-@@ -1987,7 +1987,7 @@ void ChromeDownloadManagerDelegate::CheckDownloadAllow
+@@ -2000,7 +2000,7 @@ void ChromeDownloadManagerDelegate::CheckDownloadAllow
      content::CheckDownloadAllowedCallback check_download_allowed_cb) {
    DCHECK_CURRENTLY_ON(BrowserThread::UI);
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -18,12 +18,12 @@
    // Don't download pdf if it is a file URL, as that might cause an infinite
    // download loop if Chrome is not the system pdf viewer.
    if (url.SchemeIsFile() && download_prefs_->ShouldOpenPdfInSystemReader()) {
-@@ -2069,7 +2069,7 @@ void ChromeDownloadManagerDelegate::CheckSavePackageAl
+@@ -2082,7 +2082,7 @@ void ChromeDownloadManagerDelegate::CheckSavePackageAl
    DCHECK(download_item->IsSavePackageDownload());
  
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
--    BUILDFLAG(IS_MAC)
-+    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ #if (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-     BUILDFLAG(IS_MAC)) &&                                                 \
++     BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) &&                                                 \
+     BUILDFLAG(SAFE_BROWSING_AVAILABLE)
    std::optional<enterprise_connectors::AnalysisSettings> settings =
-       safe_browsing::DeepScanningRequest::ShouldUploadBinary(download_item);
- 
+       safe_browsing::ShouldUploadBinaryForDeepScanning(download_item);

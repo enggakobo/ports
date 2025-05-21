@@ -1,6 +1,6 @@
 PORTNAME=	dissent
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.32
+DISTVERSION=	0.0.34
 CATEGORIES=	net-im
 
 MAINTAINER=	nxjoseph@protonmail.com
@@ -13,8 +13,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 LIB_DEPENDS=	libgraphene-1.0.so:graphics/graphene \
 		libspelling-1.so:x11-toolkits/libspelling
 
-USES=		gnome go:1.22,modules gstreamer pkgconfig
-USE_GNOME=	cairo gdkpixbuf2 gtk40 gtksourceview5 libadwaita
+USES=		gnome go:1.24,modules gstreamer pkgconfig
+USE_GNOME=	cairo gdkpixbuf gtk40 gtksourceview5 libadwaita
 USE_GSTREAMER=	bad good ugly
 GO_MODULE=	libdb.so/dissent
 CGO_LDFLAGS+=	-Wl,--as-needed # gtk4 deps

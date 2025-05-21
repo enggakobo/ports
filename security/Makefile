@@ -21,6 +21,7 @@
     SUBDIR += aespipe
     SUBDIR += afl++
     SUBDIR += afterglow
+    SUBDIR += agave
     SUBDIR += age
     SUBDIR += aide
     SUBDIR += amavisd-milter
@@ -68,12 +69,12 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
-    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
+    SUBDIR += certificate_maker
     SUBDIR += certmgr
     SUBDIR += certspotter
     SUBDIR += cfssl
@@ -100,6 +101,7 @@
     SUBDIR += clamtk
     SUBDIR += cloak
     SUBDIR += cops
+    SUBDIR += cosign
     SUBDIR += courier-authlib
     SUBDIR += courier-authlib-base
     SUBDIR += courierpassd
@@ -168,6 +170,7 @@
     SUBDIR += fwanalog
     SUBDIR += fwknop
     SUBDIR += fwlogwatch
+    SUBDIR += gauth
     SUBDIR += gcr
     SUBDIR += gcr3
     SUBDIR += gef
@@ -180,12 +183,12 @@
     SUBDIR += gitjacker
     SUBDIR += globalprotect-openconnect
     SUBDIR += gnome-keyring
-    SUBDIR += gnome-keyring-sharp
     SUBDIR += gnupg
     SUBDIR += gnupg-pkcs11-scd
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
+    SUBDIR += go-tuf
     SUBDIR += gokart
     SUBDIR += gokey
     SUBDIR += gonepass
@@ -215,7 +218,6 @@
     SUBDIR += heaan
     SUBDIR += headscale
     SUBDIR += heimdal
-    SUBDIR += heimdal-devel
     SUBDIR += helib
     SUBDIR += hexl
     SUBDIR += hidden-lake
@@ -230,7 +232,6 @@
     SUBDIR += hs-cryptol
     SUBDIR += hydra
     SUBDIR += hyperhotp
-    SUBDIR += i2p
     SUBDIR += i2pd
     SUBDIR += iaikpkcs11wrapper
     SUBDIR += iddawc
@@ -286,6 +287,7 @@
     SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
+    SUBDIR += libfcrypto
     SUBDIR += libfido2
     SUBDIR += libfprint
     SUBDIR += libgcrypt
@@ -327,7 +329,6 @@
     SUBDIR += libtatsu
     SUBDIR += libtomcrypt
     SUBDIR += libu2f-host
-    SUBDIR += libuecc
     SUBDIR += libwhisker
     SUBDIR += libxcrypt
     SUBDIR += libyubikey
@@ -356,7 +357,6 @@
     SUBDIR += linux-rl9-libsecret
     SUBDIR += linux-rl9-libssh
     SUBDIR += linux-rl9-libtasn1
-    SUBDIR += linux-rl9-libxcrypt
     SUBDIR += linux-rl9-nettle
     SUBDIR += linux-rl9-nss
     SUBDIR += linux-rl9-p11-kit
@@ -396,9 +396,11 @@
     SUBDIR += monocypher
     SUBDIR += munge
     SUBDIR += n2n
+    SUBDIR += naabu
     SUBDIR += ncrack
     SUBDIR += ncrypt
     SUBDIR += nebula
+    SUBDIR += netbird
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
@@ -411,6 +413,7 @@
     SUBDIR += nitrokey-app
     SUBDIR += nmap
     SUBDIR += nmap-devel
+    SUBDIR += node-sqlcipher
     SUBDIR += nss
     SUBDIR += nss_compat_ossl
     SUBDIR += nuclei
@@ -454,6 +457,7 @@
     SUBDIR += openssl32
     SUBDIR += openssl33
     SUBDIR += openssl34
+    SUBDIR += openssl35
     SUBDIR += openvas
     SUBDIR += openvpn
     SUBDIR += openvpn-admin
@@ -627,6 +631,7 @@
     SUBDIR += p5-Crypt-SmbHash
     SUBDIR += p5-Crypt-Sodium
     SUBDIR += p5-Crypt-Solitaire
+    SUBDIR += p5-Crypt-SysRandom
     SUBDIR += p5-Crypt-TEA
     SUBDIR += p5-Crypt-T_e_a
     SUBDIR += p5-Crypt-Tea_JS
@@ -921,6 +926,7 @@
     SUBDIR += py-cryptography
     SUBDIR += py-cryptography-legacy
     SUBDIR += py-cryptography-vectors
+    SUBDIR += py-cryptojwt
     SUBDIR += py-ctypescrypto
     SUBDIR += py-cybox
     SUBDIR += py-detect-secrets
@@ -1101,6 +1107,7 @@
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
+    SUBDIR += rekor
     SUBDIR += reop
     SUBDIR += rhash
     SUBDIR += rhonabwy
@@ -1145,6 +1152,7 @@
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-gitlab-cloud-connector
+    SUBDIR += rubygem-gitlab-secret_detection
     SUBDIR += rubygem-googleauth
     SUBDIR += rubygem-googleauth-gitlab
     SUBDIR += rubygem-gpgme
@@ -1202,7 +1210,6 @@
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pbkdf2-ruby
     SUBDIR += rubygem-pundit
-    SUBDIR += rubygem-pundit61
     SUBDIR += rubygem-pwned
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
@@ -1300,7 +1307,6 @@
     SUBDIR += softether-devel
     SUBDIR += softether5
     SUBDIR += softhsm2
-    SUBDIR += solana
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5
@@ -1315,6 +1321,7 @@
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-tools
     SUBDIR += ssh-vault
+    SUBDIR += sshesame
     SUBDIR += sshguard
     SUBDIR += sshpass
     SUBDIR += ssl-admin
@@ -1336,6 +1343,7 @@
     SUBDIR += su-exec
     SUBDIR += subversion-gnome-keyring
     SUBDIR += sudo
+    SUBDIR += sudo-rs
     SUBDIR += sudoscript
     SUBDIR += super
     SUBDIR += suricata
@@ -1348,6 +1356,7 @@
     SUBDIR += testssl.sh
     SUBDIR += tfhe
     SUBDIR += theonionbox
+    SUBDIR += timestamp-authority
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
@@ -1363,6 +1372,7 @@
     SUBDIR += tpm2-tss
     SUBDIR += transcrypt
     SUBDIR += trezord
+    SUBDIR += trillian
     SUBDIR += tripwire
     SUBDIR += trivy
     SUBDIR += trousers
@@ -1394,7 +1404,6 @@
     SUBDIR += wazuh-server
     SUBDIR += webfwlog
     SUBDIR += webtunnel-tor
-    SUBDIR += weggli
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssh

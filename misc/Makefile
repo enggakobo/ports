@@ -1,5 +1,6 @@
     COMMENT = Miscellaneous utilities
 
+    SUBDIR += R-cran-gapminder
     SUBDIR += R-cran-mime
     SUBDIR += R-cran-optimx
     SUBDIR += R-cran-xfun
@@ -61,6 +62,7 @@
     SUBDIR += compat11x
     SUBDIR += compat12x
     SUBDIR += compat13x
+    SUBDIR += compat14x
     SUBDIR += compat4x
     SUBDIR += compat5x
     SUBDIR += compat6x
@@ -106,6 +108,7 @@
     SUBDIR += exercism
     SUBDIR += explosions
     SUBDIR += ezc3d
+    SUBDIR += fabric
     SUBDIR += far2l
     SUBDIR += fastscapelib
     SUBDIR += felis
@@ -113,6 +116,7 @@
     SUBDIR += figlet-fonts
     SUBDIR += findutils
     SUBDIR += flag
+    SUBDIR += flag-icons
     SUBDIR += flashlight
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
@@ -200,7 +204,6 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
-    SUBDIR += jirust
     SUBDIR += jojodiff
     SUBDIR += json-tui
     SUBDIR += kbdscan
@@ -249,6 +252,8 @@
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
+    SUBDIR += linux-c7-sdl12-extralibs
+    SUBDIR += linux-rl9-sdl12-extralibs
     SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -270,6 +275,7 @@
     SUBDIR += metalink-tools
     SUBDIR += mime-support
     SUBDIR += minidnn
+    SUBDIR += minuet
     SUBDIR += mirmon
     SUBDIR += mmdnn
     SUBDIR += mmv
@@ -421,6 +427,7 @@
     SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
+    SUBDIR += py-colorzero
     SUBDIR += py-crudini
     SUBDIR += py-datasets
     SUBDIR += py-detecta
@@ -435,8 +442,10 @@
     SUBDIR += py-files-to-prompt
     SUBDIR += py-fleep
     SUBDIR += py-fuzzy
+    SUBDIR += py-gguf
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
+    SUBDIR += py-gpiozero
     SUBDIR += py-halo
     SUBDIR += py-hist
     SUBDIR += py-histoprint
@@ -456,6 +465,7 @@
     SUBDIR += py-llm
     SUBDIR += py-llm-claude-3
     SUBDIR += py-log_symbols
+    SUBDIR += py-mcp
     SUBDIR += py-mffpy
     SUBDIR += py-mixpanel
     SUBDIR += py-mmcv
@@ -470,6 +480,7 @@
     SUBDIR += py-ollama
     SUBDIR += py-onnx
     SUBDIR += py-onnx-tf
+    SUBDIR += py-onnxconverter-common
     SUBDIR += py-openai
     SUBDIR += py-openai-whisper
     SUBDIR += py-openpaperwork-core
@@ -507,6 +518,7 @@
     SUBDIR += py-pytorch-lightning
     SUBDIR += py-pyviz-comms
     SUBDIR += py-safetensors
+    SUBDIR += py-schedulefree
     SUBDIR += py-scikit-fusion
     SUBDIR += py-scikit-quant
     SUBDIR += py-serverfiles
@@ -553,6 +565,7 @@
     SUBDIR += quantum++
     SUBDIR += quary
     SUBDIR += randomx
+    SUBDIR += rash
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspbsd-led
     SUBDIR += ree
@@ -621,6 +634,7 @@
     SUBDIR += thrill
     SUBDIR += timetrace
     SUBDIR += timezonemap
+    SUBDIR += timr-tui
     SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkregexp
@@ -657,6 +671,7 @@
     SUBDIR += viz
     SUBDIR += vote
     SUBDIR += vxl
+    SUBDIR += wavedrom
     SUBDIR += wego
     SUBDIR += whichman
     SUBDIR += window

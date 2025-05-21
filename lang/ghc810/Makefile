@@ -1,6 +1,9 @@
 PORTREVISION=		4
 PKGNAMESUFFIX=		810
 
+DEPRECATED=		Old release that gone EoL
+EXPIRATION_DATE=	2025-06-01
+
 LIB_DEPENDS=		${GMP_LIB_DEPENDS}
 
 CONFIGURE_ARGS=		${GMP_CONFIGURE_ON}
@@ -30,3 +33,8 @@ PATCHDIR=	${.CURDIR}/files
 PLIST=		${.CURDIR}/pkg-plist
 
 .include	"${MASTERDIR}/Makefile"
+
+# This version of ncurses is needed by bootstrap compiler
+.if empty(PORT_OPTIONS:MBOOT)
+BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libncursesw.so.8:misc/compat12x
+.endif

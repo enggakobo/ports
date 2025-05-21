@@ -70,6 +70,7 @@
     SUBDIR += erlang-runtime25
     SUBDIR += erlang-runtime26
     SUBDIR += erlang-runtime27
+    SUBDIR += erlang-runtime28
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
@@ -96,13 +97,16 @@
     SUBDIR += gcc13-devel
     SUBDIR += gcc14
     SUBDIR += gcc14-devel
+    SUBDIR += gcc15
     SUBDIR += gcc15-devel
+    SUBDIR += gcc16-devel
     SUBDIR += gcc6-aux
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
     SUBDIR += ghc92
     SUBDIR += ghc94
+    SUBDIR += ghc96
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
@@ -124,6 +128,7 @@
     SUBDIR += go121
     SUBDIR += go122
     SUBDIR += go123
+    SUBDIR += go124
     SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gptscript
@@ -213,11 +218,9 @@
     SUBDIR += myrddin
     SUBDIR += nawk
     SUBDIR += nbfc
-    SUBDIR += neko
     SUBDIR += neocmakelsp
     SUBDIR += nesasm
     SUBDIR += newlisp
-    SUBDIR += nhc98
     SUBDIR += nickle
     SUBDIR += nim
     SUBDIR += njs
@@ -230,6 +233,7 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
+    SUBDIR += odin
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -301,7 +305,6 @@
     SUBDIR += python
     SUBDIR += python-doc-html
     SUBDIR += python-doc-pdf-a4
-    SUBDIR += python-doc-pdf-letter
     SUBDIR += python-doc-text
     SUBDIR += python-mode.el
     SUBDIR += python-tools
@@ -310,7 +313,7 @@
     SUBDIR += python3
     SUBDIR += python310
     SUBDIR += python311
-    SUBDIR += python38
+    SUBDIR += python312
     SUBDIR += python39
     SUBDIR += qmasm
     SUBDIR += quickjs
@@ -328,9 +331,10 @@
     SUBDIR += rhino
     SUBDIR += rizin
     SUBDIR += rizin-cutter
-    SUBDIR += ruby31
     SUBDIR += ruby32
     SUBDIR += ruby33
+    SUBDIR += ruby34
+    SUBDIR += ruby35
     SUBDIR += rubygem-rb_sys
     SUBDIR += rubygem-ruby_language_server
     SUBDIR += runawk
@@ -348,6 +352,7 @@
     SUBDIR += scheme48
     SUBDIR += scm
     SUBDIR += scratch
+    SUBDIR += scryer-prolog
     SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7
@@ -382,6 +387,7 @@
     SUBDIR += tclX
     SUBDIR += tolua
     SUBDIR += tolua++
+    SUBDIR += trealla-prolog
     SUBDIR += tuareg-mode.el
     SUBDIR += typstfmt
     SUBDIR += typstyle

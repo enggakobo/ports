@@ -1,6 +1,6 @@
 PORTNAME=	orange-widget-base
 DISTVERSION=	4.13.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +11,9 @@ WWW=		https://orangedatamining.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expiring devel/py-orange-canvas-core
+EXPIRATION_DATE=2025-06-21
 
 RUN_DEPENDS=	\
 		${PYTHON_PKGNAMEPREFIX}AnyQt>0:x11-toolkits/py-AnyQt@${PY_FLAVOR} \

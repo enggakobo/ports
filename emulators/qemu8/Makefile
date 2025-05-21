@@ -1,5 +1,6 @@
 PORTNAME=	qemu
-DISTVERSION=	8.2.9
+DISTVERSION=	8.2.10
+PORTREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 DIST_SUBDIR=	qemu/${PORTVERSION}
@@ -9,6 +10,9 @@ COMMENT=	QEMU CPU Emulator ${${FLAVOR}_COMMENT} - 8.X.X
 WWW=		https://www.qemu.org/
 
 LICENSE=	GPLv2
+
+DEPRECATED=	No value in maintaining older QEMU versions on FreeBSD
+EXPIRATION_DATE=	2025-06-30
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 # We need to check if it build with other ARCHS
@@ -103,7 +107,7 @@ GNUTLS_LIB_DEPENDS=		libgnutls.so:security/gnutls
 GNUTLS_CONFIGURE_OFF=		--disable-gnutls
 GTK3_LIB_DEPENDS=		libxkbcommon.so:x11/libxkbcommon
 GTK3_USES=			gettext gl
-GTK3_USE=			GNOME=gdkpixbuf2,gtk30,vte3 \
+GTK3_USE=			GNOME=gdkpixbuf,gtk30,vte3 \
 				XORG=x11,xext
 GTK3_CONFIGURE_OFF=		--disable-gtk \
 				--disable-vte
@@ -133,7 +137,7 @@ USBREDIR_CONFIGURE_OFF=		--disable-usb-redir
 VDE_LIB_DEPENDS=		libvdeplug.so:net/vde2
 VDE_CONFIGURE_OFF=		--disable-vde
 X11_USES=			sdl
-X11_USE=			GNOME=gdkpixbuf2 \
+X11_USE=			GNOME=gdkpixbuf \
 				SDL=sdl2 \
 				XORG=x11,xext
 X11_CONFIGURE_ENABLE=		sdl

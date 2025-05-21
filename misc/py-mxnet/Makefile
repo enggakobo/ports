@@ -1,6 +1,6 @@
 PORTNAME=	mxnet
 DISTVERSION=	1.9.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -9,6 +9,9 @@ COMMENT=	Apache MXNet: Ultra-scalable deep learning framework
 WWW=		https://mxnet.apache.org/
 
 LICENSE=	APACHE20
+
+DEPRECATED=	Depends on expired misc/mxnet
+EXPIRATION_DATE=2025-06-01
 
 BUILD_DEPENDS=	mxnet>0:misc/mxnet
 RUN_DEPENDS=	mxnet>0:misc/mxnet \

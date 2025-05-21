@@ -2,6 +2,7 @@ PORTNAME=	breeze
 DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11-themes kde kde-plasma
 
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Artwork, styles and assets for the Breeze visual style for the Plasma Desktop
 

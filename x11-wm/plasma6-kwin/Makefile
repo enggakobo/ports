@@ -2,10 +2,6 @@ PORTNAME=	kwin
 DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11-wm kde kde-plasma
 
-PATCH_SITES=	https://invent.kde.org/plasma/kwin/-/commit/
-# https://bugs.kde.org/show_bug.cgi?id=499846
-PATCHFILES=	c97bc26ca9de8b1462f6ccb05fb2dafe01cd82cb.diff:-p1
-
 COMMENT=	Easy to use, but flexible, X Window Manager and Wayland Compositor
 MAINTAINER=	kde@FreeBSD.org
 
@@ -49,5 +45,13 @@ USE_XORG=	ice sm x11 xcb xext xi
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 SHEBANG_FILES=	src/plugins/strip-effect-metadata.py
+
+OPTIONS_DEFINE=		EI
+OPTIONS_DEFAULT=	EI
+OPTIONS_SUB=		yes
+
+EI_DESC=		Emulated input for Wayland
+EI_LIB_DEPENDS=		libei.so:x11/libei
+EI_CMAKE_BOOL=		KWIN_BUILD_EIS
 
 .include <bsd.port.mk>

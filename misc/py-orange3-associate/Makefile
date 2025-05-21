@@ -1,6 +1,6 @@
 PORTNAME=	orange3-associate
 DISTVERSION=	1.1.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -9,6 +9,9 @@ COMMENT=	Orange 3 add-on: Frequent itemsets and association rules mining
 WWW=		https://github.com/biolab/orange3-associate
 
 LICENSE=	GPLv3+
+
+DEPRECATED=	Depends on expiring misc/orange3
+EXPIRATION_DATE=2025-06-21
 
 RUN_DEPENDS=	orange3>0:misc/orange3 \
 		${PYNUMPY} \

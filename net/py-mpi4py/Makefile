@@ -1,5 +1,6 @@
 PORTNAME=	mpi4py
-DISTVERSION=	4.0.2
+DISTVERSION=	4.0.3
+PORTREVISION=	1
 CATEGORIES=	net parallel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,10 +12,8 @@ WWW=		https://github.com/mpi4py/mpi4py
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cython3>3.0.0:lang/cython3@${PY_FLAVOR}
-
 USES=		pkgconfig python
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	autoplist concurrent cython3 distutils
 
 MP?=			OPENMPI
 .if ${MP} == "OPENMPI"

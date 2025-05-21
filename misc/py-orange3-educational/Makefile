@@ -1,6 +1,6 @@
 PORTNAME=	orange3-educational
 DISTVERSION=	0.4.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc education python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -10,6 +10,9 @@ WWW=		https://github.com/biolab/orange3-educational
 
 LICENSE=	CC-BY-3.0
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expiring misc/orange3
+EXPIRATION_DATE=2025-06-21
 
 RUN_DEPENDS=	orange3>0:misc/orange3 \
 		${PYNUMPY} \

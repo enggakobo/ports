@@ -35,8 +35,8 @@
     SUBDIR += cx88
     SUBDIR += dav1d
     SUBDIR += decord
+    SUBDIR += deforaos-camera
     SUBDIR += deforaos-player
-    SUBDIR += dirac
     SUBDIR += dovi_tool
     SUBDIR += dragon
     SUBDIR += droidcam
@@ -52,7 +52,6 @@
     SUBDIR += dvdstyler
     SUBDIR += elementary-videos
     SUBDIR += emby-server
-    SUBDIR += emovix
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
     SUBDIR += ffmpeg
@@ -67,12 +66,9 @@
     SUBDIR += fswebcam
     SUBDIR += gaupol
     SUBDIR += gavl
-    SUBDIR += gdialog
     SUBDIR += get_iplayer
     SUBDIR += gmmlib
     SUBDIR += gmp-api
-    SUBDIR += gmtk
-    SUBDIR += gnome-mplayer
     SUBDIR += gpac-libgpac
     SUBDIR += gpac-mp4box
     SUBDIR += gpodder
@@ -168,7 +164,6 @@
     SUBDIR += libdvdcss
     SUBDIR += libdvdnav
     SUBDIR += libdvdread
-    SUBDIR += libfame
     SUBDIR += libgav1
     SUBDIR += libhdhomerun
     SUBDIR += libmatroska
@@ -247,7 +242,6 @@
     SUBDIR += mpv-mpris
     SUBDIR += mpvpaper
     SUBDIR += mpvqt
-    SUBDIR += msdl
     SUBDIR += msopenh264
     SUBDIR += mswebrtc
     SUBDIR += musikcube
@@ -261,6 +255,7 @@
     SUBDIR += nymphcast
     SUBDIR += nymphcastlib
     SUBDIR += nymphrpc
+    SUBDIR += obs-multi-rtmp
     SUBDIR += obs-recursion-effect
     SUBDIR += obs-streamfx
     SUBDIR += obs-studio
@@ -268,7 +263,6 @@
     SUBDIR += obs-waveform
     SUBDIR += obuparse
     SUBDIR += oggvideotools
-    SUBDIR += ogmrip
     SUBDIR += ogmtools
     SUBDIR += olive
     SUBDIR += onevpl
@@ -300,7 +294,6 @@
     SUBDIR += plexmediaserver-plexpass
     SUBDIR += podcastdl
     SUBDIR += poe
-    SUBDIR += projectx
     SUBDIR += ptx-kmod
     SUBDIR += pwcbsd
     SUBDIR += pwcview
@@ -312,6 +305,7 @@
     SUBDIR += py-ffmpeg-python
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
+    SUBDIR += py-knowit
     SUBDIR += py-mat2
     SUBDIR += py-metadata-cleaner
     SUBDIR += py-mido
@@ -327,6 +321,7 @@
     SUBDIR += py-srt
     SUBDIR += py-subliminal
     SUBDIR += py-tartube
+    SUBDIR += py-trakit
     SUBDIR += py-tvnamer
     SUBDIR += py-ustreamer
     SUBDIR += qmmp-plugin-pack-qt5
@@ -358,7 +353,6 @@
     SUBDIR += smplayer-skins
     SUBDIR += smplayer-themes
     SUBDIR += snapcast
-    SUBDIR += spook
     SUBDIR += streamlink
     SUBDIR += subtitlecomposer
     SUBDIR += subtitleoffsetmodifier
@@ -370,7 +364,6 @@
     SUBDIR += syncplay
     SUBDIR += szap-s2
     SUBDIR += tautulli
-    SUBDIR += tcmplex-panteltje
     SUBDIR += termplay
     SUBDIR += tinyobjloader
     SUBDIR += tivodecode

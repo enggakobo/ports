@@ -1,4 +1,4 @@
-PORTREVISION=	2
+PORTREVISION=	0
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -119,8 +119,6 @@ NOT_FOR_ARCHS_REASON=	Unsupported host_cpu
 .if defined(PRERELEASE)
 MASTER_SITES+=	https://dev-builds.libreoffice.org/pre-releases/src/
 .endif
-
-CONFLICTS_INSTALL=	libreoffice6
 
 INSTALL_TARGET=	distro-pack-install
 

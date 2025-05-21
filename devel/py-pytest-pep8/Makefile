@@ -1,5 +1,6 @@
 PORTNAME=	pytest-pep8
 PORTVERSION=	1.0.6
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,6 +11,9 @@ WWW=		https://bitbucket.org/pytest-dev/pytest-pep8
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expiring devel/py-pytest4
+EXPIRATION_DATE=2025-06-21
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest4>=2.4.2:devel/py-pytest4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest4-cache>=0:devel/py-pytest4-cache@${PY_FLAVOR} \

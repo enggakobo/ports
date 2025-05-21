@@ -1,6 +1,6 @@
 PORTNAME=	dotnet-host
 DISTVERSIONPREFIX=	v
-DISTVERSION=	9.0.2
+DISTVERSION=	9.0.4
 CATEGORIES=	lang devel
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -14,7 +14,7 @@ NOT_FOR_ARCHS_REASON=	eng/native/functions.cmake:7: 'i386' is an unsupported arc
 
 BUILD_DEPENDS=	bash:shells/bash
 
-USES=		cmake:indirect llvm:noexport ssl
+USES=		cmake:indirect llvm:noexport
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	dotnet

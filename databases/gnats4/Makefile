@@ -1,6 +1,6 @@
 PORTNAME=	gnats
 PORTVERSION=	4.1.0
-PORTREVISION=	24
+PORTREVISION=	25
 CATEGORIES=	databases devel
 MASTER_SITES=	GNU
 PKGNAMESUFFIX=	4
@@ -14,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_mips=		Does not build: error: conflicting types for yy_scan_string
 BROKEN_mips64=		Does not build: error: conflicting types for yy_scan_string
+DEPRECATED=	Abandoned upstream, last release in 2015 and last activity about 9 years ago
+EXPIRATION_DATE=2025-06-30
 
 USES=		cpe gettext-runtime gmake
 CPE_VENDOR=	gnu

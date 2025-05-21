@@ -1,6 +1,5 @@
 PORTNAME=	kicad
-DISTVERSION=	9.0.0-rc3
-PORTREVISION=	1
+DISTVERSION=	9.0.2
 PORTEPOCH=	2
 CATEGORIES=	cad
 
@@ -38,7 +37,7 @@ USE_XORG=	ice x11 xext
 USE_GL=		egl gl glu glut opengl
 USE_WX=		3.2
 WX_COMPS=	python:lib wx
-USE_GNOME=	atk cairo gdkpixbuf2 gtk30 pango
+USE_GNOME=	atk cairo gdkpixbuf gtk30 pango
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	kicad/code
@@ -65,7 +64,9 @@ CMAKE_ARGS=	-DwxWidgets_CONFIG_EXECUTABLE=${WX_CONFIG}	\
 CMAKE_ENV+=	DODBC_PATH=${LOCALBASE}
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S|^${PREFIX}/||}
+# SOVERSION helps testing rc packages
+PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S|^${PREFIX}/||} \
+		SOVERSION=${PORTVERSION:C/.r[0-9]*//}
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes

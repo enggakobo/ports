@@ -1,5 +1,6 @@
 PORTNAME=	vscode
-DISTVERSION=	1.97.1
+DISTVERSION=	1.100.1
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:node_modules
 DISTFILES=	vscode-node-modules-${DISTVERSION}${EXTRACT_SUFX}:node_modules \
@@ -69,14 +70,14 @@ USES=		desktop-file-utils gl gmake gnome iconv:wchar_t jpeg \
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	e249dada235c2083c83813bd65b7f4707fb97b76
+SOURCE_COMMIT_HASH=	91fa95bccb027ece6a968589bb1d662fa9c8e170
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
 USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 		xrandr xrender xscrnsaver xtst
 USE_GL=		gbm gl glesv2
-USE_GNOME=	atk cairo pango gdkpixbuf2 gtk30 libxml2 libxslt
+USE_GNOME=	atk cairo pango gdkpixbuf gtk30 libxml2 libxslt
 
 SHEBANG_REGEX=	./(extensions|node_modules|resources|scripts|src)/.*\.sh$$
 PATHFIX_FILES=	src/vs/workbench/contrib/debug/node/terminals.ts
@@ -94,10 +95,11 @@ MAKE_ENV+=	PLAYWRIGHT_BROWSERS_PATH=${WRKDIR}/pw-browsers \
 # Don't create __pycache__ directory when executing node-gyp
 # This is a workaround to avoid filesystem violations during poudriere build
 MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
+TEST_ENV=	${MAKE_ENV:C/TMPDIR=.*//}
 
 NODEJS_DIR=	${.CURDIR:H:H}/www/node20
 .include "${NODEJS_DIR}/Makefile.version"
-ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron32
+ELECTRON_DIR=	${.CURDIR:H:H}/devel/electron34
 .include "${ELECTRON_DIR}/Makefile.version"
 
 ELECTRON_DOWNLOAD_URL=	https://github.com/electron/electron/releases/download/v${ELECTRON_VER}
@@ -274,9 +276,9 @@ pre-test:
 do-test:
 # Note: Xvfb or something similar is necessary for headless testing
 # unit tests
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./scripts/test.sh || ${TRUE}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./scripts/test.sh --build || ${TRUE}
 # UI smoke tests
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} yarn smoketest
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} npm run smoketest
 
 build-remote-extension-host: configure pre-build
 # setup download cache for node

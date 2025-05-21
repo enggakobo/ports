@@ -5,6 +5,7 @@ share/applications/emoji-picker.desktop
 share/applications/ibus-setup-typing-booster.desktop
 %%DATADIR%%/data/Blocks.txt
 %%DATADIR%%/data/DerivedAge.txt
+%%DATADIR%%/data/NameAliases.txt
 %%DATADIR%%/data/UnicodeData.txt
 %%DATADIR%%/data/annotations/af.xml
 %%DATADIR%%/data/annotations/ak.xml
@@ -427,6 +428,7 @@ share/locale/de/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/el/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/es/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/fa/LC_MESSAGES/ibus-typing-booster.mo
+share/locale/fi/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/fr/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/he/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/hu/LC_MESSAGES/ibus-typing-booster.mo
@@ -434,12 +436,14 @@ share/locale/it/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/ja/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/ka/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/kab/LC_MESSAGES/ibus-typing-booster.mo
+share/locale/ko/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/lt/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/nl/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/or/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/pl/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/pt/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/pt_BR/LC_MESSAGES/ibus-typing-booster.mo
+share/locale/ro/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/ru/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/si/LC_MESSAGES/ibus-typing-booster.mo
 share/locale/sv/LC_MESSAGES/ibus-typing-booster.mo

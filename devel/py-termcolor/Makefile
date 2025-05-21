@@ -1,11 +1,11 @@
 PORTNAME=	termcolor
-PORTVERSION=	2.4.0
+DISTVERSION=	3.0.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	c.kworr@gmail.com
-COMMENT=	ANSII Color formatting for output in terminal
+MAINTAINER=	arcade@b1t.name
+COMMENT=	ANSI Color formatting for output in terminal
 WWW=		https://pypi.org/project/termcolor/
 
 LICENSE=	MIT

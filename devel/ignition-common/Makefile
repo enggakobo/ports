@@ -1,6 +1,6 @@
 PORTNAME=	ignition-common
 DISTVERSION=	3.0.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 
@@ -34,6 +34,8 @@ BB_COMMIT=	a5c4d5a35bb8
 WRKSRC=		${WRKDIR}/${BB_ACCOUNT}-${BB_PROJECT}-${BB_COMMIT}
 
 PLIST_SUB=	COMMON_IGN_VER=common${DISTVERSION:R:R}
+
+TESTING_UNSAFE=	6 tests failed out of 79
 
 do-test:
 	@cd ${BUILD_WRKSRC} && \

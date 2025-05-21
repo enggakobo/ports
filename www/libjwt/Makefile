@@ -1,11 +1,12 @@
 PORTNAME=	libjwt
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.2
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/benmcollins/libjwt/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JSON Web Token implementation in C
-WWW=		https://github.com/benmcollins/libjwt
+WWW=		https://libjwt.io/ \
+		https://github.com/benmcollins/libjwt
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
